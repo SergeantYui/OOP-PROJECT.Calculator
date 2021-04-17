@@ -10,13 +10,9 @@ using System.Windows.Forms;
 
 namespace OOP_PROJECT.Calculator
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        Double resultValue = 0; // Dito sinisave yung result sa operation
-        String operationPerformed = ""; //Dito sinisave yung operation
-        bool isOperationPerformed = false; // need mag true para sa display
-
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
