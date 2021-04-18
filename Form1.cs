@@ -109,5 +109,26 @@ namespace OOP_PROJECT.Calculator
             resultValue = double.Parse(current_operation.Text);
             display1.Text = "";
         }
+
+        private void popup_Click_Click(object sender, EventArgs e)
+        {
+            {
+                Thread t = new Thread(new ThreadStart(popup)); //For thread/connecting
+                t.Start();
+                Thread.Sleep(2000);
+
+                InitializeComponent();
+
+                t.Abort();
+            }
+
+            void popup()
+            {
+                Application.Run(new Form3()); //This will run the form3
+            }
+
+
+        }
+
     }
 }

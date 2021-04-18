@@ -47,7 +47,7 @@ namespace OOP_PROJECT.Calculator
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.popup_Click = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.current_operation = new System.Windows.Forms.TextBox();
             this.display1 = new System.Windows.Forms.TextBox();
@@ -279,9 +279,10 @@ namespace OOP_PROJECT.Calculator
             // 
             // button16
             // 
+            this.button16.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
             this.button16.FlatAppearance.BorderSize = 2;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Location = new System.Drawing.Point(12, 175);
@@ -289,7 +290,7 @@ namespace OOP_PROJECT.Calculator
             this.button16.Size = new System.Drawing.Size(70, 60);
             this.button16.TabIndex = 22;
             this.button16.Text = "CE";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
@@ -307,19 +308,20 @@ namespace OOP_PROJECT.Calculator
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
-            // button18
+            // popup_Click
             // 
-            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.button18.FlatAppearance.BorderSize = 2;
-            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(164, 175);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(70, 60);
-            this.button18.TabIndex = 24;
-            this.button18.Text = ".";
-            this.button18.UseVisualStyleBackColor = true;
+            this.popup_Click.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.popup_Click.FlatAppearance.BorderSize = 2;
+            this.popup_Click.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.popup_Click.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.popup_Click.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.popup_Click.Location = new System.Drawing.Point(164, 175);
+            this.popup_Click.Name = "popup_Click";
+            this.popup_Click.Size = new System.Drawing.Size(70, 60);
+            this.popup_Click.TabIndex = 24;
+            this.popup_Click.Text = ".";
+            this.popup_Click.UseVisualStyleBackColor = true;
+            this.popup_Click.Click += new System.EventHandler(this.popup_Click_Click);
             // 
             // button19
             // 
@@ -339,9 +341,12 @@ namespace OOP_PROJECT.Calculator
             // current_operation
             // 
             this.current_operation.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.current_operation.Location = new System.Drawing.Point(52, 86);
+            this.current_operation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.current_operation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.current_operation.ForeColor = System.Drawing.SystemColors.Info;
+            this.current_operation.Location = new System.Drawing.Point(12, 86);
             this.current_operation.Name = "current_operation";
-            this.current_operation.Size = new System.Drawing.Size(181, 20);
+            this.current_operation.Size = new System.Drawing.Size(298, 38);
             this.current_operation.TabIndex = 26;
             this.current_operation.Text = "0";
             this.current_operation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -362,7 +367,7 @@ namespace OOP_PROJECT.Calculator
             this.Controls.Add(this.display1);
             this.Controls.Add(this.current_operation);
             this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
+            this.Controls.Add(this.popup_Click);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -412,7 +417,7 @@ namespace OOP_PROJECT.Calculator
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button popup_Click;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TextBox current_operation;
         private System.Windows.Forms.TextBox display1;
