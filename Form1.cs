@@ -37,5 +37,77 @@ namespace OOP_PROJECT.Calculator
         {
 
         }
+
+        private void button_numbers(object sender, EventArgs e)
+        {
+            if ((current_operation.Text == "0") || (isOperationPerformed))
+                current_operation.Text = "";
+            isOperationPerformed = false;
+
+            Button button = (Button)sender;
+            if (button.Text == ".")
+            {
+                if (button.Text.Contains("."))
+                    current_operation.Text = current_operation.Text + button.Text;
+            }
+            else
+                current_operation.Text = current_operation.Text + button.Text;
+        }
+
+        private void button_operator(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            if (resultValue != 0)
+            {
+                button_equal.PerformClick();
+                operationPerformed = button.Text;
+                display1.Text = resultValue + " " + operationPerformed;
+                isOperationPerformed = true;
+            }
+            else
+            {
+                operationPerformed = button.Text;
+                resultValue = Double.Parse(current_operation.Text);
+                display1.Text = resultValue + " " + operationPerformed;
+                isOperationPerformed = true;
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            current_operation.Text = "0";
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            current_operation.Text = "0";
+            display1.Text = "";
+            resultValue = 0;
+        }
+
+        private void button_equal_Click(object sender, EventArgs e)
+        {
+            switch (operationPerformed)
+            {
+                case "+":
+                    current_operation.Text = (resultValue + double.Parse(current_operation.Text)).ToString();
+                    break;
+                case "-":
+                    current_operation.Text = (resultValue - double.Parse(current_operation.Text)).ToString();
+                    break;
+                case "x":
+                    current_operation.Text = (resultValue * double.Parse(current_operation.Text)).ToString();
+                    break;
+                case "%":
+                    current_operation.Text = (resultValue / double.Parse(current_operation.Text)).ToString();
+                    break;
+                default:
+                    break;
+
+            }
+
+            resultValue = double.Parse(current_operation.Text);
+            display1.Text = "";
+        }
     }
 }
