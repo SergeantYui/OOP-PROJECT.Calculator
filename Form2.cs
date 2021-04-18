@@ -16,5 +16,17 @@ namespace OOP_PROJECT.Calculator
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Increment(1);
+            if (progressBar1.Value == 3000)
+                timer1.Stop();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
