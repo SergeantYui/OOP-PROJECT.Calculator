@@ -35,7 +35,7 @@ namespace OOP_PROJECT.Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void button_numbers(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace OOP_PROJECT.Calculator
             Button button = (Button)sender;
             if (button.Text == ".")
             {
-                if (button.Text.Contains("."))
+                if (!current_operation.Text.Contains("."))
                     current_operation.Text = current_operation.Text + button.Text;
             }
             else
@@ -108,27 +108,24 @@ namespace OOP_PROJECT.Calculator
 
             resultValue = double.Parse(current_operation.Text);
             display1.Text = "";
+            resultValue = 0;
         }
 
         private void popup_Click_Click(object sender, EventArgs e)
+
         {
+            Form popup = new Form3();
+            DialogResult dialogresult = popup.ShowDialog();
+            if (dialogresult == DialogResult.OK)
             {
-                Thread t = new Thread(new ThreadStart(popup)); //For thread/connecting
-                t.Start();
-                Thread.Sleep(2000);
-
-                InitializeComponent();
-
-                t.Abort();
-            }
-
-            void popup()
-            {
-                Application.Run(new Form3()); //This will run the form3
+                popup.Dispose();
             }
 
 
         }
+            
+
+}
 
     }
-}
+

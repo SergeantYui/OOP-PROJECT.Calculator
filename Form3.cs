@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace OOP_PROJECT.Calculator
 {
@@ -15,6 +16,7 @@ namespace OOP_PROJECT.Calculator
         public Form3()
         {
             InitializeComponent();
+        
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -22,12 +24,34 @@ namespace OOP_PROJECT.Calculator
            
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            progressBar1.Increment(10);
-            if (progressBar1.Value == 3000)
-                timer1.Stop();
-            
+            BackColor = Color.FromArgb(100, 0, 0, 0);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://twitter.com/_wuwel");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/Mr.Loved.by.No.One/");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/SergeantYui");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            BackColor = Color.FromArgb(100, 0, 0, 0);
         }
     }
 }

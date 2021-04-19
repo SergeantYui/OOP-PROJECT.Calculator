@@ -101,5 +101,23 @@
   <ItemGroup>
     <None Include="Resources\bg.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aesthetic-icon-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\163955774_4121176401236584_297865798401050132_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\163809373_429703731653221_1737569497960971355_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140666372_226549165679521_1488584903499450530_n.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
