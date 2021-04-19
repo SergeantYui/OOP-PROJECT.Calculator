@@ -108,7 +108,7 @@ namespace OOP_PROJECT.Calculator
 
             resultValue = double.Parse(current_operation.Text);
             display1.Text = "";
-            resultValue = 0;
+            operationPerformed = "";
         }
 
         private void popup_Click_Click(object sender, EventArgs e)

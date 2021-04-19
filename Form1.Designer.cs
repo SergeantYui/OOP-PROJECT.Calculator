@@ -362,7 +362,7 @@ namespace OOP_PROJECT.Calculator
             // popup_Click
             // 
             this.popup_Click.BackColor = System.Drawing.Color.Transparent;
-            this.popup_Click.BackgroundImage = global::OOP_PROJECT.Calculator.Properties.Resources.aesthetic_icon_1;
+            this.popup_Click.BackgroundImage = global::OOP_PROJECT.Calculator.Properties.Resources._140666372_226549165679521_1488584903499450530_n;
             this.popup_Click.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.popup_Click.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
             this.popup_Click.FlatAppearance.BorderSize = 2;
