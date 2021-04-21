@@ -21,7 +21,7 @@ namespace OOP_PROJECT.Calculator
         {
             Thread t = new Thread(new ThreadStart(Splashstart)); //For thread/connecting
             t.Start();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
             InitializeComponent();
 
@@ -41,11 +41,11 @@ namespace OOP_PROJECT.Calculator
         private void button_numbers(object sender, EventArgs e)
         {
             if ((current_operation.Text == "0") || (isOperationPerformed))
-                current_operation.Text = "";
-            isOperationPerformed = false;
+                current_operation.Text = ""; //para mag empty yung
+            isOperationPerformed = false; //Para sa display
 
             Button button = (Button)sender;
-            if (button.Text == ".")
+            if (button.Text == ".") //applies to period button only
             {
                 if (!current_operation.Text.Contains("."))
                     current_operation.Text = current_operation.Text + button.Text;
@@ -54,31 +54,31 @@ namespace OOP_PROJECT.Calculator
                 current_operation.Text = current_operation.Text + button.Text;
         }
 
-        private void button_operator(object sender, EventArgs e)
+        private void button_operator(object sender, EventArgs e) // for saving the first input
         {
             Button button = (Button)sender;
-            if (resultValue != 0)
+            if (resultValue != 0) //if not equal to zero
             {
-                button_equal.PerformClick();
+                button_equal.PerformClick(); //mag equal yung operation
                 operationPerformed = button.Text;
                 display1.Text = resultValue + " " + operationPerformed;
-                isOperationPerformed = true;
+                isOperationPerformed = true; //pag naka true, magdi display yung operation sa display1
             }
-            else
+            else //if not
             {
-                operationPerformed = button.Text;
-                resultValue = Double.Parse(current_operation.Text);
+                operationPerformed = button.Text; // magsa save muna
+                resultValue = Double.Parse(current_operation.Text); //resultValue is saved as a double
                 display1.Text = resultValue + " " + operationPerformed;
                 isOperationPerformed = true;
             }
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button16_Click(object sender, EventArgs e) //clear entry (CE)
         {
             current_operation.Text = "0";
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void button17_Click(object sender, EventArgs e) //clear everything (C)
         {
             current_operation.Text = "0";
             display1.Text = "";
@@ -87,9 +87,9 @@ namespace OOP_PROJECT.Calculator
 
         private void button_equal_Click(object sender, EventArgs e)
         {
-            switch (operationPerformed)
+            switch (operationPerformed) //yung unang input na number and operator
             {
-                case "+":
+                case "+": //reading the text
                     current_operation.Text = (resultValue + double.Parse(current_operation.Text)).ToString();
                     break;
                 case "-":
@@ -101,12 +101,12 @@ namespace OOP_PROJECT.Calculator
                 case "%":
                     current_operation.Text = (resultValue / double.Parse(current_operation.Text)).ToString();
                     break;
-                default:
+                default: // pag walang na meet sa mga given arguments, default will activate
                     break;
 
             }
 
-            resultValue = double.Parse(current_operation.Text);
+            resultValue = double.Parse(current_operation.Text); //saving the last result for the new operation
             display1.Text = "";
             operationPerformed = "";
         }
@@ -116,7 +116,7 @@ namespace OOP_PROJECT.Calculator
         {
             Form popup = new Form3();
             DialogResult dialogresult = popup.ShowDialog();
-            if (dialogresult == DialogResult.OK)
+            if (dialogresult == DialogResult.OK) //yung modal value from the button
             {
                 popup.Dispose();
             }
