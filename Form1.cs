@@ -9,10 +9,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace OOP_PROJECT.Calculator
 {
     public partial class Form1 : Form
     {
+        double special_operator = 0;
         Double resultValue = 0; // Dito sinisave yung result sa operation
         String operationPerformed = ""; //Dito sinisave yung operation
         bool isOperationPerformed = false; // need mag true para sa display
@@ -43,7 +45,7 @@ namespace OOP_PROJECT.Calculator
             if ((current_operation.Text == "0") || (isOperationPerformed))
                 current_operation.Text = ""; //para mag empty yung
             isOperationPerformed = false; //Para sa display
-
+            
             Button button = (Button)sender;
             if (button.Text == ".") //applies to period button only
             {
@@ -64,13 +66,14 @@ namespace OOP_PROJECT.Calculator
                 display1.Text = resultValue + " " + operationPerformed;
                 isOperationPerformed = true; //pag naka true, magdi display yung operation sa display1
             }
-            else //if not
+            else//if not
             {
                 operationPerformed = button.Text; // magsa save muna
                 resultValue = Double.Parse(current_operation.Text); //resultValue is saved as a double
                 display1.Text = resultValue + " " + operationPerformed;
                 isOperationPerformed = true;
             }
+           
         }
 
         private void button16_Click(object sender, EventArgs e) //clear entry (CE)
@@ -123,9 +126,19 @@ namespace OOP_PROJECT.Calculator
 
 
         }
-            
 
-}
+        private void squared_click(object sender, EventArgs e)
+        {
+            special_operator = double.Parse(current_operation.Text);
+            current_operation.Text = Math.Pow(special_operator, 2).ToString();
+        }   //Math.pow(input, 2 ) 2 kasi squared
+
+        private void cube_click(object sender, EventArgs e)
+        {
+            special_operator = double.Parse(current_operation.Text);
+            current_operation.Text = Math.Pow(special_operator,3).ToString();
+        }   //Math.pow(input, 3 ) 3 kasi cubed
+    }
 
     }
 

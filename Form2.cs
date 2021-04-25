@@ -19,8 +19,8 @@ namespace OOP_PROJECT.Calculator
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar1.Increment(1);
-            if (progressBar1.Value == 3000)
+            progressBar1.Increment(10);
+            if (progressBar1.Value == 500)
                 timer1.Stop();
         }
 

@@ -37,9 +37,11 @@ namespace OOP_PROJECT.Calculator
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(29, 290);
+            this.progressBar1.BackColor = System.Drawing.Color.AliceBlue;
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.progressBar1.Location = new System.Drawing.Point(12, 303);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(254, 23);
+            this.progressBar1.Size = new System.Drawing.Size(297, 10);
             this.progressBar1.TabIndex = 0;
             this.progressBar1.Visible = false;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);

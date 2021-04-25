@@ -51,6 +51,8 @@ namespace OOP_PROJECT.Calculator
             this.button19 = new System.Windows.Forms.Button();
             this.current_operation = new System.Windows.Forms.TextBox();
             this.display1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -419,6 +421,42 @@ namespace OOP_PROJECT.Calculator
             this.display1.Size = new System.Drawing.Size(197, 22);
             this.display1.TabIndex = 27;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(12, 139);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 30);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "x^2";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.squared_click);
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.Transparent;
+            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.button18.FlatAppearance.BorderSize = 2;
+            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button18.Location = new System.Drawing.Point(88, 139);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(70, 30);
+            this.button18.TabIndex = 29;
+            this.button18.Text = "x^3";
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.cube_click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +465,8 @@ namespace OOP_PROJECT.Calculator
             this.BackgroundImage = global::OOP_PROJECT.Calculator.Properties.Resources.bg2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(321, 511);
+            this.Controls.Add(this.button18);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.display1);
             this.Controls.Add(this.current_operation);
             this.Controls.Add(this.button19);
@@ -483,6 +523,8 @@ namespace OOP_PROJECT.Calculator
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TextBox current_operation;
         private System.Windows.Forms.TextBox display1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button18;
     }
 }
 
