@@ -63,6 +63,7 @@ namespace OOP_PROJECT.Calculator
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

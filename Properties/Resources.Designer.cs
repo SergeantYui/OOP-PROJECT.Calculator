@@ -93,6 +93,16 @@ namespace OOP_PROJECT.Calculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _200 {
+            get {
+                object obj = ResourceManager.GetObject("200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aesthetic_icon_1 {
             get {
                 object obj = ResourceManager.GetObject("aesthetic-icon-1", resourceCulture);
@@ -156,6 +166,26 @@ namespace OOP_PROJECT.Calculator.Properties {
         internal static System.Drawing.Bitmap github {
             get {
                 object obj = ResourceManager.GetObject("github", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ME {
+            get {
+                object obj = ResourceManager.GetObject("ME", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pervert {
+            get {
+                object obj = ResourceManager.GetObject("pervert", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

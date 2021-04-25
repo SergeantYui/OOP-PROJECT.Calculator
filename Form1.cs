@@ -18,6 +18,7 @@ namespace OOP_PROJECT.Calculator
         Double resultValue = 0; // Dito sinisave yung result sa operation
         String operationPerformed = ""; //Dito sinisave yung operation
         bool isOperationPerformed = false; // need mag true para sa display
+        double pi = Math.PI;
 
         public Form1()
         {
@@ -138,6 +139,26 @@ namespace OOP_PROJECT.Calculator
             special_operator = double.Parse(current_operation.Text);
             current_operation.Text = Math.Pow(special_operator,3).ToString();
         }   //Math.pow(input, 3 ) 3 kasi cubed
+
+        private void pi_click(object sender, EventArgs e)
+        {
+            special_operator = double.Parse(current_operation.Text);
+            current_operation.Text = (special_operator * pi).ToString();
+
+        }
+
+        private void divide_click(object sender, EventArgs e)
+        {
+            special_operator = double.Parse(current_operation.Text);
+            current_operation.Text = (1 / special_operator).ToString();
+        }
+
+        private void sing_click(object sender, EventArgs e)
+        {
+            special_operator = double.Parse(current_operation.Text);
+            current_operation.Text = (-1 *  special_operator).ToString();
+        }
+
     }
 
     }

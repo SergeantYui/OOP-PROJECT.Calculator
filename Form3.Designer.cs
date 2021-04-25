@@ -60,16 +60,17 @@ namespace OOP_PROJECT.Calculator
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 41);
             this.button1.TabIndex = 0;
-            this.button1.Text = "OK";
+            this.button1.Text = "back";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(12, 173);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(3, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 21);
             this.label1.TabIndex = 1;
@@ -97,9 +98,10 @@ namespace OOP_PROJECT.Calculator
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(12, 194);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label3.Location = new System.Drawing.Point(3, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 21);
             this.label3.TabIndex = 4;
@@ -107,11 +109,11 @@ namespace OOP_PROJECT.Calculator
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::OOP_PROJECT.Calculator.Properties.Resources._140666372_226549165679521_1488584903499450530_n;
+            this.pictureBox1.BackgroundImage = global::OOP_PROJECT.Calculator.Properties.Resources.ME;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(189, 206);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -197,11 +199,12 @@ namespace OOP_PROJECT.Calculator
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
