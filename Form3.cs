@@ -51,12 +51,16 @@ namespace OOP_PROJECT.Calculator
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            BackColor = Color.FromArgb(100, 0, 0, 0);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void my_picture_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

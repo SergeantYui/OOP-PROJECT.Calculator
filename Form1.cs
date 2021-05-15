@@ -18,17 +18,17 @@ namespace OOP_PROJECT.Calculator
         Double resultValue = 0; // Dito sinisave yung result sa operation
         String operationPerformed = ""; //Dito sinisave yung operation
         bool isOperationPerformed = false; // need mag true para sa display
-        double pi = Math.PI;
+        const double pi = Math.PI;
 
         public Form1()
         {
-            Thread t = new Thread(new ThreadStart(Splashstart)); //For thread/connecting
+            Thread t = new Thread(new ThreadStart(Splashstart)); //Thread: Creating a new instance
             t.Start();
             Thread.Sleep(3000);
 
             InitializeComponent();
 
-            t.Abort();
+            t.Abort(); //Use for destroying threads
         }
 
         public void Splashstart()
@@ -38,15 +38,15 @@ namespace OOP_PROJECT.Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button_numbers(object sender, EventArgs e)
         {
             if ((current_operation.Text == "0") || (isOperationPerformed))
-                current_operation.Text = ""; //para mag empty yung
+                current_operation.Text = ""; //para mag empty yung textbox
             isOperationPerformed = false; //Para sa display
-            
+
             Button button = (Button)sender;
             if (button.Text == ".") //applies to period button only
             {
@@ -74,19 +74,7 @@ namespace OOP_PROJECT.Calculator
                 display1.Text = resultValue + " " + operationPerformed;
                 isOperationPerformed = true;
             }
-           
-        }
 
-        private void button16_Click(object sender, EventArgs e) //clear entry (CE)
-        {
-            current_operation.Text = "0";
-        }
-
-        private void button17_Click(object sender, EventArgs e) //clear everything (C)
-        {
-            current_operation.Text = "0";
-            display1.Text = "";
-            resultValue = 0;
         }
 
         private void button_equal_Click(object sender, EventArgs e)
@@ -115,51 +103,63 @@ namespace OOP_PROJECT.Calculator
             operationPerformed = "";
         }
 
-        private void popup_Click_Click(object sender, EventArgs e)
+        private void popup_Click_Click(object sender, EventArgs e)//For my information (form3)
 
         {
             Form popup = new Form3();
             DialogResult dialogresult = popup.ShowDialog();
             if (dialogresult == DialogResult.OK) //yung modal value from the button
             {
-                popup.Dispose();
+                popup.Dispose(); // For memory cleanup and release and reset unmanaged resources
             }
 
 
         }
 
-        private void squared_click(object sender, EventArgs e)
+        private void squared_click(object sender, EventArgs e) //For squared operator
         {
             special_operator = double.Parse(current_operation.Text);
             current_operation.Text = Math.Pow(special_operator, 2).ToString();
         }   //Math.pow(input, 2 ) 2 kasi squared
 
-        private void cube_click(object sender, EventArgs e)
+        private void cube_click(object sender, EventArgs e) // For cubed operator
         {
             special_operator = double.Parse(current_operation.Text);
-            current_operation.Text = Math.Pow(special_operator,3).ToString();
+            current_operation.Text = Math.Pow(special_operator, 3).ToString();
         }   //Math.pow(input, 3 ) 3 kasi cubed
 
-        private void pi_click(object sender, EventArgs e)
+        private void pi_click(object sender, EventArgs e) // For pi operator
         {
             special_operator = double.Parse(current_operation.Text);
             current_operation.Text = (special_operator * pi).ToString();
 
         }
 
-        private void divide_click(object sender, EventArgs e)
+        private void divide_click(object sender, EventArgs e) // 1/x to decimal
         {
             special_operator = double.Parse(current_operation.Text);
             current_operation.Text = (1 / special_operator).ToString();
         }
 
-        private void sing_click(object sender, EventArgs e)
+        private void sign_click(object sender, EventArgs e) // For sign
         {
             special_operator = double.Parse(current_operation.Text);
-            current_operation.Text = (-1 *  special_operator).ToString();
+            current_operation.Text = (-1 * special_operator).ToString();
         }
 
-    }
+        private void button_C_Click(object sender, EventArgs e) // Empty 
+        {
+            current_operation.Text = "0";
+            display1.Text = "";
+            resultValue = 0;
+        }
+
+        private void button_CE_Click(object sender, EventArgs e) // Clear entry
+        {
+            current_operation.Text = "0";
+        }
+
 
     }
+}
 

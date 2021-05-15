@@ -344,7 +344,7 @@ namespace OOP_PROJECT.Calculator
             this.button16.TabIndex = 22;
             this.button16.Text = "CE";
             this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button16.Click += new System.EventHandler(this.button_CE_Click);
             // 
             // button17
             // 
@@ -362,12 +362,12 @@ namespace OOP_PROJECT.Calculator
             this.button17.TabIndex = 23;
             this.button17.Text = "C";
             this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.Click += new System.EventHandler(this.button_C_Click);
             // 
             // popup_Click
             // 
             this.popup_Click.BackColor = System.Drawing.Color.Transparent;
-            this.popup_Click.BackgroundImage = global::OOP_PROJECT.Calculator.Properties.Resources._140666372_226549165679521_1488584903499450530_n;
+            this.popup_Click.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("popup_Click.BackgroundImage")));
             this.popup_Click.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.popup_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.popup_Click.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
@@ -516,14 +516,14 @@ namespace OOP_PROJECT.Calculator
             this.button22.TabIndex = 32;
             this.button22.Text = "+/-";
             this.button22.UseVisualStyleBackColor = false;
-            this.button22.Click += new System.EventHandler(this.sing_click);
+            this.button22.Click += new System.EventHandler(this.sign_click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::OOP_PROJECT.Calculator.Properties.Resources.bg2;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(321, 511);
             this.Controls.Add(this.button22);
